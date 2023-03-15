@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body .loadingbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #b58105;
+  background-color: #1c1d1c;
+}
+
+.loadingbox .all-loading {
+  display: block;
+}
+
+.loadingbox .all-loading > div {
+  margin-top: 20px;
+}
+
+.loadingbox .loading {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  background: #b58105;
+  overflow: hidden;
+  display: block;
+}
+
+.loadingbox .loading::before {
+  content: '';
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  position: absolute;
+  bottom: 100px;
+  left: -50px;
+  border-radius: 40%;
+  animation: loading1 4s linear infinite;
+}
+
+@keyframes loading1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingbox .loading::after {
+  content: '';
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  position: absolute;
+  bottom: 100px;
+  left: -50px;
+  opacity: 0.6;
+  border-radius: 35%;
+  animation: loading2 6s linear infinite;
+}
+
+@keyframes loading2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(340deg);
+  }
+}
+
+.loadingbox .loadingtext {
+  font-size: 40px;
+  font-family: 'Bebas Neue', sans-serif;
+  text-align: center;
+}
+
+.loadingbox .box {
+  width: 200px;
+  height: 30px;
+  border: 1px solid #000;
+  position: relative;
+  overflow: hidden;
+}
+.loadingbox .box::before {
+  content: '';
+  width: 200px;
+  height: 30px;
+  background: linear-gradient(45deg, #b58105, #ff503f);
+  position: absolute;
+  animation: boxloading 4s linear infinite;
+}
+
+@keyframes boxloading {
+  0% {
+    left: -200px;
+  }
+
+  100% {
+    left: 0;
+  }
+}

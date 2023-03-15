@@ -150,4 +150,7 @@ $(document).ready(function () {
     $(window).on('resize', function () {
         $('.modal:visible').each(centerModal);
     });
+    $(window).on('load', function () {
+        console.log('是否加载完毕')
+    })
 });
