@@ -86,11 +86,16 @@ hr {
   margin-top: 0;
 }
 
-.navbar-brand,
 .navbar-nav > li > a {
   padding-bottom: 0;
   padding-top: 0;
   color: #fff !important;
+}
+
+.navbar-brand {
+  padding-bottom: 0;
+  padding-top: 0;
+  color: #293241;
 }
 
 .navbar-brand {
@@ -168,19 +173,13 @@ hr {
 }
 
 .menu-fixed .navbar-toggle,
-.menu-fixed span,
 .menu-fixed .navbar-nav > li > a {
-  /*  */
   color: #293241 !important;
-}
-
-.menu-fixed .navbar-brand span {
-  margin-top: 13px;
 }
 
 .menu-fixed .navbar-brand {
   display: block;
-  margin-top: 0;
+  /* margin-top: 0; */
   opacity: 1;
 }
 
@@ -465,10 +464,6 @@ footer.row {
   background-color: #29a598;
   color: #fffefd;
   text-decoration: none;
-}
-
-.menu-fixed .outline.green {
-  margin-top: 11px;
 }
 
 /* Codepen and Github SVG Buttons */
@@ -759,7 +754,7 @@ footer.row {
   /*** Mobile Nav ***/
   .menu-fixed .navbar-brand {
     display: block;
-    margin-top: 0;
+    margin-top: 10px;
     opacity: 1;
   }
 
