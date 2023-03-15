@@ -738,6 +738,12 @@ footer.row {
   }
 }
 
+@media (max-width: 838px) {
+  .carousel-inner .carousel-pic {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
   /*** Page Elements ***/
   section .row [class^='col-sm-'] + [class^='col-sm-'],

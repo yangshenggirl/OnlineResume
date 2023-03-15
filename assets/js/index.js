@@ -83,7 +83,6 @@ $(document).ready(function () {
     // Mobile Menu Icon Toggle
     $menuButton.on('click', function () {
         if ($menuIcon.hasClass('glyphicon-menu-hamburger')) {
-            console.log($navbarBrand)
             $navbarBrand.css({
                 "opacity": 1,
                 "color": '#777'
@@ -144,13 +143,8 @@ $(document).ready(function () {
         $dialog.css('margin-top', $offset);
     }
 
-
-
     $(document).on('show.bs.modal', '.modal', centerModal);
     $(window).on('resize', function () {
         $('.modal:visible').each(centerModal);
     });
-    $(window).on('load', function () {
-        console.log('是否加载完毕')
-    })
 });
