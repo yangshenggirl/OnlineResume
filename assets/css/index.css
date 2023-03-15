@@ -22,17 +22,14 @@ body {
 }
 
 h1 {
-  /* font-family: 'Unica One', cursive; */
   font-size: 3rem;
 }
 
 h2 {
-  /* font-family: 'Unica One', cursive; */
   font-size: 2.3rem;
 }
 
 h3 {
-  /* font-family: 'Unica One', cursive; */
   font-size: 1.8rem;
 }
 
@@ -41,7 +38,6 @@ h4 {
   font-size: 1.1rem;
   letter-spacing: 1px;
   line-height: 1.5;
-  text-transform: uppercase;
 }
 
 small {
@@ -92,7 +88,6 @@ hr {
 
 .navbar-brand,
 .navbar-nav > li > a {
-  /* font-family: 'Unica One', cursive; */
   padding-bottom: 0;
   padding-top: 0;
   color: #fff !important;
@@ -100,13 +95,11 @@ hr {
 
 .navbar-brand {
   font-size: 1.5rem;
-  height: 60px;
+  height: 80px;
   line-height: 60px;
   margin-top: 10px;
-  /* opacity: 0; */
-  display: none;
+  opacity: 0;
   overflow: hidden;
-  text-transform: uppercase;
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -164,28 +157,31 @@ hr {
   background-color: rgba(255, 254, 253, 0.97);
   border-radius: 0;
   box-shadow: 0 3px 9px rgba(8, 33, 30, 0.15);
-  height: 60px;
+  height: 80px;
   padding-top: 0;
   position: fixed;
   transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
 .menu-fixed .navbar-header {
-  height: 60px;
+  height: 80px;
 }
 
 .menu-fixed .navbar-toggle,
 .menu-fixed span,
 .menu-fixed .navbar-nav > li > a {
-  margin-top: 13px;
+  /*  */
   color: #293241 !important;
+}
+
+.menu-fixed .navbar-brand span {
+  margin-top: 13px;
 }
 
 .menu-fixed .navbar-brand {
   display: block;
   margin-top: 0;
-  /* opacity: 1; */
-  display: block;
+  opacity: 1;
 }
 
 /* =====================
@@ -215,7 +211,6 @@ hr {
 .jumbotron .title {
   font-size: 2.5em;
   text-shadow: 0px 2px 3px #2d2d2d;
-  font-family: 'Unica One', cursive;
 }
 
 .jumbotron p {
@@ -410,7 +405,6 @@ footer.row {
 ===================== */
 .td-btn {
   padding: 12px 36px;
-  text-transform: uppercase;
   transition: background-color 0.2s ease-in-out;
 }
 
@@ -757,12 +751,12 @@ footer.row {
   }
 
   /*** Mobile Nav ***/
-
+  .navbar-toggle .navbar-brand,
   .menu-fixed .navbar-brand {
     display: block;
     margin-top: 0;
-    /* opacity: 1; */
-    display: block;
+    opacity: 1;
+    color: #293241;
   }
 
   .navbar-toggle {
@@ -812,7 +806,6 @@ footer.row {
   }
 
   .navbar-nav > li > a {
-    /* font-family: 'Unica One', cursive; */
     padding-bottom: 0;
     padding-top: 0;
     color: #2d2d2d !important;

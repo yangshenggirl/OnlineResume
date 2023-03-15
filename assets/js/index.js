@@ -2,7 +2,7 @@
 $(document).ready(function () {
     var $body = $('body');
     var $navbar = $('.navbar-default');
-    var $navbarBrand = $('.navbar-header .navbar-brand')
+    var $navbarBrand = $('.navbar-brand')
     var $offsetY = $navbar.offset().top + 10;
     var $menuButton = $('button.navbar-toggle');
     var $menuIcon = $('.navbar-toggle .glyphicon');
@@ -39,7 +39,6 @@ $(document).ready(function () {
                 }, 600);
             }
         });
-        console.log(bottom_of_window, bottom_of_progressBar)
 
         // skill loading animation
         if (bottom_of_window > bottom_of_progressBar) {
@@ -62,6 +61,7 @@ $(document).ready(function () {
 
     // Mobile Menu functions
     function openMenu() {
+        console.log($navbarBrand)
         $menuIcon.removeClass('glyphicon-menu-hamburger').addClass('glyphicon-remove active');
         $modalBackdropDiv.css('z-index', 900);
         $body.append($modalBackdropDiv);
@@ -84,8 +84,9 @@ $(document).ready(function () {
     // Mobile Menu Icon Toggle
     $menuButton.on('click', function () {
         if ($menuIcon.hasClass('glyphicon-menu-hamburger')) {
+            console.log(1111)
             openMenu();
-            $navbarBrand.css('display: block')
+
             // Close menu after clicking a link
             $collapsedMenuItem.on('click', function () {
                 $('.navbar-toggle').click(); // Trigger collapse animation
