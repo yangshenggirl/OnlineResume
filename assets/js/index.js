@@ -2,6 +2,7 @@
 $(document).ready(function () {
     var $body = $('body');
     var $navbar = $('.navbar-default');
+    var $navbarBrand = $('.navbar-header .navbar-brand')
     var $offsetY = $navbar.offset().top + 10;
     var $menuButton = $('button.navbar-toggle');
     var $menuIcon = $('.navbar-toggle .glyphicon');
@@ -84,6 +85,7 @@ $(document).ready(function () {
     $menuButton.on('click', function () {
         if ($menuIcon.hasClass('glyphicon-menu-hamburger')) {
             openMenu();
+            $navbarBrand.css('display: block')
             // Close menu after clicking a link
             $collapsedMenuItem.on('click', function () {
                 $('.navbar-toggle').click(); // Trigger collapse animation
