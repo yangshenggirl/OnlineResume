@@ -193,10 +193,8 @@ hr {
 ===================== */
 .jumbotron {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url('../images/background1.jpg') center center fixed;
-  /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url('https://yangshenggirl.github.io/OnlineResume/assets/images/background.jpg')
-      center center fixed; */
+      center center fixed;
   background-size: cover;
   height: 100%;
   margin: 0;
@@ -295,7 +293,6 @@ footer.row {
   left: 48px;
   width: calc(100vw - 100px);
   padding: 20px;
-  /* text-align: center; */
   -webkit-border-radius: 0 5px 5px;
   -moz-border-radius: 0 5px 5px;
   border-radius: 0 5px 5px;
@@ -826,18 +823,14 @@ footer.row {
   }
 }
 
-@media screen and (min-width: 767px) and (max-width: 800px) {
-  /* .navbar-brand,
+@media screen and (min-width: 767px) and (max-width: 904px) {
+  .navbar-brand,
   .navbar-nav > li > a {
-    font-family: 'Unica One', cursive;
-    padding-bottom: 0;
-    padding-top: 0;
-    color: #2d2d2d !important;
+    font-size: 0.85rem;
   }
-
-  .experience ul li {
-    margin: 0;
-  } */
+  .experience ul li .experience-content {
+    width: calc(50vw - 80px);
+  }
 }
 
 @media screen and (min-width: 960px) {
