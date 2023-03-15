@@ -751,12 +751,10 @@ footer.row {
   }
 
   /*** Mobile Nav ***/
-  .navbar-toggle .navbar-brand,
   .menu-fixed .navbar-brand {
     display: block;
     margin-top: 0;
     opacity: 1;
-    color: #293241;
   }
 
   .navbar-toggle {

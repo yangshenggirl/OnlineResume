@@ -61,7 +61,6 @@ $(document).ready(function () {
 
     // Mobile Menu functions
     function openMenu() {
-        console.log($navbarBrand)
         $menuIcon.removeClass('glyphicon-menu-hamburger').addClass('glyphicon-remove active');
         $modalBackdropDiv.css('z-index', 900);
         $body.append($modalBackdropDiv);
@@ -84,9 +83,12 @@ $(document).ready(function () {
     // Mobile Menu Icon Toggle
     $menuButton.on('click', function () {
         if ($menuIcon.hasClass('glyphicon-menu-hamburger')) {
-            console.log(1111)
+            console.log($navbarBrand)
+            $navbarBrand.css({
+                "opacity": 1,
+                "color": '#777'
+            })
             openMenu();
-
             // Close menu after clicking a link
             $collapsedMenuItem.on('click', function () {
                 $('.navbar-toggle').click(); // Trigger collapse animation
@@ -126,7 +128,6 @@ $(document).ready(function () {
     $concatBtn.on('click', function (e) {
         window.open('https://yangshenggirl.github.io/OnlineResume/assets/docs/web前端.pdf', '_blank');
     })
-
 
 
     // Center modals vertically
