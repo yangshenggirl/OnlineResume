@@ -9,19 +9,24 @@ $(document).ready(function () {
     var $modalBackdropDiv = $('<div class="modal-backdrop fade in"></div>');
     var $scrollButton = $('.scroll');
     var $socialIcon = $('.social');
+    var $concatBtn = $('#cantactMe')
+    var $projectExperience = $('.experience .experience-hidden')
+    var $progressBar = $(".progress-bar")
+    var bottom_of_progressBar = $progressBar.offset().top + $progressBar.outerHeight();
 
     // Fixed Nav after scroll
     function scroll() {
+        // 菜单滑动监听
         if ($(window).scrollTop() >= $offsetY) {
             $navbar.addClass('menu-fixed').css('background-color', 'rgba(255,254,253,0.97)');
         } else {
             $navbar.removeClass('menu-fixed').css('background-color', 'transparent');
         }
 
+        // 项目经历滑动监听
         var bottom_of_window = $(window).scrollTop() + $(window).height();
         // Check the location of each element hidden */
-        $('.experience .experience-hidden').each(function (i) {
-
+        $projectExperience.each(function (i) {
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
 
             /* If the object is completely visible in the window, fadeIn it */
@@ -33,8 +38,26 @@ $(document).ready(function () {
                 }, 600);
             }
         });
+        console.log(bottom_of_window, bottom_of_progressBar)
+
+        // skill loading animation
+        if (bottom_of_window > bottom_of_progressBar) {
+            $progressBar.each(function (i) {
+                /* If the object is completely visible in the window, fadeIn it */
+                var ariaValueNow = $(this).prop('ariaValueNow') + "%"
+                var progressBarWidth = $(this).width() / $(window).width()
+                if (!$(this).data('animated')) {
+                    $(this).data('animated', true)
+                    $(this).animate({
+                        width: ariaValueNow
+                    }, 1000);
+                }
+
+            });
+        }
     }
-    document.onscroll = scroll;
+
+    document.onscroll = scroll, 100;
 
     // Mobile Menu functions
     function openMenu() {
@@ -96,6 +119,13 @@ $(document).ready(function () {
         }
     });
 
+    // contcat me
+    $concatBtn.on('click', function (e) {
+        window.open('https://yangshenggirl.github.io/OnlineResume/assets/docs/web前端.pdf', '_blank');
+    })
+
+
+
     // Center modals vertically
     function centerModal() {
         $(this).css('display', 'block');
@@ -109,6 +139,8 @@ $(document).ready(function () {
         }
         $dialog.css('margin-top', $offset);
     }
+
+
 
     $(document).on('show.bs.modal', '.modal', centerModal);
     $(window).on('resize', function () {
